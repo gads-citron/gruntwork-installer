@@ -1,0 +1,17 @@
+name: release
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 23 * * *"
+      
+jobs:
+  release:
+    runs-on: [self-hosted]
+    steps:
+    - name: release
+      uses: gads-citron/actions-collection/release-detector-prod@master
+      with:
+        ssh-private-key: ${{ secrets.CI_TAG_DEPLOY_KEY }}
+        gh-oauth-token: ${{ secrets.CI_GITHUB_OAUTH_TOKEN }}
+        branch: "main"
