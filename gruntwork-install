@@ -48,7 +48,7 @@ function print_usage {
   echo "  gruntwork-install \\"
   echo "    --module-name 'fail2ban' \\"
   echo "    --repo 'https://github.com/gads-citron/terraform-aws-security' \\"
-  echo "    --tag 'v0.44.9'"
+  echo "    --tag 'v1.0.0'"
   echo
 }
 
