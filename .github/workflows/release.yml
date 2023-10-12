@@ -11,7 +11,7 @@ jobs:
       group: dev
     steps:
     - name: release
-      uses: gads-citron/actions-collection/release-detector-prod@master
+      uses: gads-citron/actions-collection-public/release-detector-prod@master
       with:
         ssh-private-key: ${{ secrets.CI_TAG_DEPLOY_KEY }}
         gh-oauth-token: ${{ secrets.CI_GITHUB_OAUTH_TOKEN }}
